@@ -1,10 +1,12 @@
 import Vue from 'vue'
-import App from './App.vue'
+import './plugins/axios'
+import  App from './App.vue'
 import router from './router'
 import store from './store'
-
+import './plugins/vant.js'
+import Http from './api/http/Http.js'
 Vue.config.productionTip = false
-
+Vue.prototype.$Http = Http
 new Vue({
   router,
   store,
